@@ -9,9 +9,18 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.part2 = exports.part1 = void 0;
 const inputData_1 = require("../utils/inputData");
+const part1 = (input) => {
+};
+exports.part1 = part1;
+const part2 = (input) => {
+};
+exports.part2 = part2;
 const puzzle = (year, day) => __awaiter(void 0, void 0, void 0, function* () {
     const input = yield (0, inputData_1.getPuzzleData)(`https://adventofcode.com/${year}/day/${day}/input`);
-    console.log(input.plain);
+    const result1 = (0, exports.part1)(input);
+    const result2 = (0, exports.part2)(input);
+    console.log({ result1, result2 });
 });
 exports.default = puzzle;

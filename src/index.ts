@@ -7,19 +7,10 @@ import inquirer from 'inquirer';
 import { getFunctionName } from "./utils/functionName";
 
 console.log("Welcome to Advent of Code! 🧑‍🎄")
-console.log(process.env.NODE_ENV)
 
 export const sum = (a:number, b:number) => {
 
     return a + b
-
-}
-
-const testGetData = async () => {
-
-    const data = await getPuzzleData("https://adventofcode.com/2023/day/7/input")
-    console.log(data.plain)
-    console.log(data.lineArray)
 
 }
 
@@ -56,7 +47,7 @@ const main = async () => {
         if (month !== 12) console.log("Not December Yet") 
             else {
                 const p = getFunctionName(day)
-                puzzle()[p]("2023", day )
+                await puzzle()[p]("2024", day )
             }
 
       }
@@ -65,7 +56,7 @@ const main = async () => {
 
             const p = getFunctionName(answer)
 
-            puzzle()[p]("2023", answer)
+            await puzzle()[p]("2024", answer)
 
             }
 

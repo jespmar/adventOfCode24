@@ -13,22 +13,15 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.sum = void 0;
-const inputData_1 = require("./utils/inputData");
 const prompts_1 = require("@inquirer/prompts");
 require("dotenv/config");
 const days_1 = __importDefault(require("./days"));
 const functionName_1 = require("./utils/functionName");
 console.log("Welcome to Advent of Code! 🧑‍🎄");
-console.log(process.env.NODE_ENV);
 const sum = (a, b) => {
     return a + b;
 };
 exports.sum = sum;
-const testGetData = () => __awaiter(void 0, void 0, void 0, function* () {
-    const data = yield (0, inputData_1.getPuzzleData)("https://adventofcode.com/2023/day/7/input");
-    console.log(data.plain);
-    console.log(data.lineArray);
-});
 const main = () => __awaiter(void 0, void 0, void 0, function* () {
     const days = [];
     for (let i = 0; i < 24; i++) {
@@ -54,12 +47,12 @@ const main = () => __awaiter(void 0, void 0, void 0, function* () {
             console.log("Not December Yet");
         else {
             const p = (0, functionName_1.getFunctionName)(day);
-            (0, days_1.default)()[p]("2023", day);
+            yield (0, days_1.default)()[p]("2024", day);
         }
     }
     else {
         const p = (0, functionName_1.getFunctionName)(answer);
-        (0, days_1.default)()[p]("2023", answer);
+        yield (0, days_1.default)()[p]("2024", answer);
     }
 });
 main();
