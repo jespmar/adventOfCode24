@@ -2,7 +2,7 @@ import {describe, expect, test} from '@jest/globals';
 import {part1, part2} from "../days/day2"
 
 
-describe('Day 1', () => {
+describe('Day 2', () => {
 
     const testData = 
     `7 6 4 2 1
